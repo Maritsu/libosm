@@ -6,6 +6,7 @@ libosm_sources = [
 
 libosm_private_deps = [
   utfcpp_dep,
+  cpr_dep,
 ]
 
 libosm_public_deps = []

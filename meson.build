@@ -27,5 +27,19 @@ utfcpp_opts.add_cmake_defines({'UTF8_TESTS' : 'OFF'})
 utfcpp_proj = cmake.subproject('utfcpp', options : utfcpp_opts)
 utfcpp_dep = utfcpp_proj.dependency('utf8cpp')
 
+# CPR subproject and curl dependency
+curl_dep = dependency(
+  'libcurl',
+  disabler : true,
+  not_found_message : 'libcurl not found. fetching along with cpr..',
+)
+
+cpr_opts = cmake.subproject_options()
+if curl_dep.found()
+  cpr_opts.add_cmake_defines({'CPR_USE_SYSTEM_CURL' : 'ON'})
+endif
+cpr_proj = cmake.subproject('cpr', options : cpr_opts)
+cpr_dep = cpr_proj.dependency('cpr')
+
 # Source directory
 subdir('src')

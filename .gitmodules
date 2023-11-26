@@ -1,3 +1,7 @@
 [submodule "submodules/utfcpp"]
 	path = submodules/utfcpp
 	url = https://github.com/nemtrif/utfcpp.git
+[submodule "submodules/cpr"]
+	path = submodules/cpr
+	url = https://github.com/libcpr/cpr
+	branch = 1.10.x

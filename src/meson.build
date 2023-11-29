@@ -1,6 +1,7 @@
 libosm_sources = [
   'sources.cpp',
   'filter.cpp',
+  'listing.cpp',
   'libosm.cpp',
 ]
 

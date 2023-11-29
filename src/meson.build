@@ -1,6 +1,6 @@
 libosm_sources = [
-  'fetcher.cpp',
   'sources.cpp',
+  'filter.cpp',
   'libosm.cpp',
 ]
 

@@ -16,5 +16,26 @@
 
 #pragma once
 
+// placeholder
+struct PlaceholderType {};
+
+#include <string>
+#include <vector>
+
 namespace libosm {
+
+class BasicSource {
+protected:
+	std::u8string _name;
+	std::u8string _abbrev;
+
+public:
+	virtual ~BasicSource();
+
+	virtual std::vector<PlaceholderType> search(const std::u8string& query) = 0;
+
+	std::u8string getName() const;
+	std::u8string getAbbrev() const;
+};
+
 }

@@ -18,4 +18,7 @@
 
 namespace libosm {
 
+std::u8string BasicSource::getName() const { return _name; }
+std::u8string BasicSource::getAbbrev() const { return _abbrev; }
+
 }
